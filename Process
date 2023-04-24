@@ -1,0 +1,104 @@
+
+node        ---> v16.20.0
+npm         ---> 9.6.5
+sql         ---> 8.0.25
+bootstap    ---> ^5.2.3
+axios       ---> ^1.3.6
+sts         ---> 4.18.0
+java        ---> java 8
+
+
+
+Backend part:
+
+Step 1: Create spring project
+
+    Install Spring Tool Suite (4) for eclipse.
+    Link--->    https://spring.io/tools
+    Extract file and open ----> /home/pradip/Practice/STS/sts-4.18.0.RELEASE/SpringToolSuite4
+    Select workspace and launch ----->/home/pradip/Practice/STS/Workspace 1
+    Create Spring Starter Project
+
+Step 2: Create database 
+
+    Download and install mysql workbench
+    Link ---> https://dev.mysql.com/downloads/workbench/
+    create database using workbench
+
+    edit the applications.properties file in the project--->set database url,username,password,hibernate dialect,ddl-auto
+
+Step 3: Create 
+
+    create the packages in project for model,controller,repository,exception.
+    create model class for the employee and give annotations
+    create repository interface for employee
+
+
+Step 4: Create Restful web services
+
+    create custom exception
+    create Employcontroller and make api    
+
+Step 5: Test rest api using browser or by using postman
+    
+    download postman:
+    link --> https://www.postman.com/downloads/
+    
+
+Frontend Part:
+
+    
+Step 6:
+    Install node and npm
+    terminal --> sudo apt install nodejs
+             --> node -v
+             --> nmp -v
+
+    Install vscode editor to write code for frontend
+    link-->https://code.visualstudio.com/download
+
+
+    Now create react application:
+    terminal --> npx create-react-app frontend_react
+             --> cd frontend_react
+             --> npm start
+
+
+Step 7: write code for react application
+    
+    Integrate Bootstrap css library with react
+    terminal--> sudo npm install bootstrap
+    import bootstrap into the index.js file
+
+Step 8:
+    create Header and Footer component
+    Create Employees component to display employee list.
+    Add Employees component into App component.
+
+
+Step 9: Make REST API call to fetch data
+    For that we have use third party http library like axios
+    So install axios in react application
+    
+    terminal--> npm install axios --save
+
+    create seperate service class which will invoke api call using axios get method
+
+    set the all api data into employees state in Employees component   
+
+    componentDidMount(){
+        EmpService.getAllEmployees().then((res)=>{
+            this.setState({employees: res.data});
+        });
+    }
+
+    sometimes you get origin cross policy issue: to avoid it use annotation 
+    @CrossOrigin(origin= "localhost:3000") at Employye model class in spring backend
+
+
+
+
+
+
+
+
