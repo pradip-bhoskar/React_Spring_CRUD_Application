@@ -1,21 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export default class Header extends Component {
-    render() {
-        return (
+function Header() {
+  const navigate = useNavigate();
 
-            <nav class="navbar navbar-light bg-light navbar-expand-sm">
-                <a href="#" class="navbar-brand">ReactSpring</a>
-                {/* <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+  return (
+    <div>
+      <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <a href="#" class="navbar-brand">ReactSpring</a>
+        {/* <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button> */}
 
-                <div class="navbar-collapse collapse" id="navbar" >
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-link">Add Employee</a></li>
-                    </ul>
-                </div>
-            </nav>
-        )
-    }
+        <div class="navbar-collapse collapse" id="navbar" >
+          <ul class="navbar-nav">
+            <li class="nav-item" onClick={() => navigate('/add-employee')}>Add Employee</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  )
 }
+
+export default Header;
+

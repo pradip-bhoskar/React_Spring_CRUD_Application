@@ -96,9 +96,44 @@ Step 9: Make REST API call to fetch data
     @CrossOrigin(origin= "localhost:3000") at Employye model class in spring backend
 
 
+Step 10:
+    Create the routing to navigate between pages.
+    for that install react-router-dom package in project
+    terminal---> npm install react-router-dom
+
+    make routing in App component
+    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+    <Routes>
+        <Route path='/' Component={Employees}></Route>
+        <Route path='/employees' Component={Employees}></Route>
+    </Routes>
 
 
+Step 11:
+    Now create add employee rest API using backend
+    Test the api using postman
 
 
+Step 12:
+    create new component to add employee
+    design the AddEmployee component i.e make the form
+    make navigation to redirect add employee page
+
+Step 13:
+    make rest api call using EmpsService to add employee
+    axios.post(base_api_url,employee);
+    call EmpService.addEmployee(employee) in AddEmployee component
 
 
+Convert class component to functional component
+    https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks
+
+
+React forms:
+    https://www.devhandbook.com/react/forms/
+
+
+Possibly use functional components because it supports useNavigate hook to navigate tabs
+
+
+Step 14:
