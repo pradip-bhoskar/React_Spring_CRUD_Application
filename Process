@@ -137,3 +137,15 @@ Possibly use functional components because it supports useNavigate hook to navig
 
 
 Step 14:
+    create api using backend to get employee by id
+    create api using backend to update employee
+  
+Step 15: 
+
+    create component to update employee.
+    make a routing in App.js to navigate update page
+    get id using useparam
+    fetch employee using axios
+    then store information of employee and show it into the form
+    then update the value by using onchange event
+    then send the data and id towords api to update it using put method of axios

@@ -12,5 +12,14 @@ class EmpService {
         return axios.post(base_api_url, employee);
     }
 
+    getEmployeeById(id) {
+        return axios.get(base_api_url + "/" + id);
+    }
+
+    updateEmployee(employee, id) {
+        console.log(employee, id)
+        return axios.put(base_api_url + "/" + id, employee);
+    }
+
 }
 export default new EmpService();
