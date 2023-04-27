@@ -14,7 +14,7 @@ function Header() {
 
         <div class="navbar-collapse collapse" id="navbar" >
           <ul class="navbar-nav">
-            <li class="nav-item" onClick={() => navigate('/add-employee')}>Add Employee</li>
+            <li class="nav-item" style={{cursor: 'pointer',color:'blue'}} onClick={() => navigate('/add-employee') }>Add Employee</li>
           </ul>
         </div>
       </nav>

@@ -154,3 +154,5 @@ Step 16:
     create api using backend to delete employee by id
 
     create button to delete 
+    delete the employee using delete method of axios.
+    make fresh api call to refresh the component
