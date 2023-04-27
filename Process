@@ -149,3 +149,8 @@ Step 15:
     then store information of employee and show it into the form
     then update the value by using onchange event
     then send the data and id towords api to update it using put method of axios
+
+Step 16:
+    create api using backend to delete employee by id
+
+    create button to delete 

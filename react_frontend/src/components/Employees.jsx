@@ -1,7 +1,7 @@
 import React, { Component, useState,useEffect } from 'react'
 import EmpService from '../services/EmpService'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 
 
 function Employees(){
@@ -14,6 +14,20 @@ function Employees(){
             setEmployees(res.data);
         });  
       },[]);     
+
+
+      const navigate = useNavigate();
+      
+      const deleteEmployee =(id)=>{
+        EmpService.deleteEmployeeById(id).then(res=>{
+            console.log('Employee deleted successfully...');
+            
+            axios.get(base_api_url).then((res) => {
+                setEmployees(res.data);
+            }); 
+
+          });
+      }
 
     return(
         
@@ -45,7 +59,8 @@ function Employees(){
                                 <td>{emp.email_id}</td>
                                 <td>{emp.mobile_number}</td>
                                 <td>
-                                <Link className='btn btn-success' to={`/update-employee/${emp.id}`} >update</Link>
+                                <Link className='btn btn-success' to={`/update-employee/${emp.id}`} >update</Link><span>  </span>
+                                <button className='btn btn-danger'  onClick={()=>{deleteEmployee(emp.id);}}>delete</button>
                                 </td>
                             </tr>
                         )

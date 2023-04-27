@@ -21,5 +21,9 @@ class EmpService {
         return axios.put(base_api_url + "/" + id, employee);
     }
 
+    deleteEmployeeById(id){
+        return axios.delete(base_api_url + "/" + id)
+    }
+
 }
 export default new EmpService();
