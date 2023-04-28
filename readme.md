@@ -1,13 +1,14 @@
 
-node        ---> v16.20.0
-npm         ---> 9.6.5
-sql         ---> 8.0.25
-bootstap    ---> ^5.2.3
-axios       ---> ^1.3.6
-sts         ---> 4.18.0
-java        ---> java 8
+node       : ---> v16.20.0
+npm        : ---> 9.6.5
+sql        : ---> 8.0.25
+bootstap   : ---> ^5.2.3
+axios      : ---> ^1.3.6
+sts        : ---> 4.18.0
+java       : ---> java 8
 
 
+Youtube Link: https://youtu.be/fq3wYm7q2dE
 
 Backend part:
 
